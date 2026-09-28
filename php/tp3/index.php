@@ -38,6 +38,9 @@
     <label for="Couleur">Couleur</label>
     <input type="color" name="Couleur" id="Couleur">
     <br>
+    <label for="Inverser">Inverser les pieces (haut/bas)</label>
+    <input type="checkbox" name="Inverser" id="Inverser">
+    <br>
     <input type="submit" value="Mettre a jour le damier">
 </form>
 
@@ -45,13 +48,13 @@
 
 function chargerPieces($chemin) {
     $pieces = [];
-    $handle = fopen($chemin, 'r');
-    fgetcsv($handle);
-    while (($ligne = fgetcsv($handle)) !== false) {
+    $gererPiece = fopen($chemin, 'r');
+    fgetcsv($gererPiece, null, ',', '"', '\\');
+    while (($ligne = fgetcsv($gererPiece, null, ',', '"', '\\')) !== false) {
         $cle = $ligne[3] . ',' . $ligne[4];
         $pieces[$cle] = $ligne[2];
     }
-    fclose($handle);
+    fclose($gererPiece);
     return $pieces;
 }
 
@@ -61,14 +64,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nbLignes = (int)$_POST['Ligne'];
     $nbColonnes = (int)$_POST['Colonne'];
     $couleur = $_POST['Couleur'];
+    $inverser = isset($_POST['Inverser']);
 
     echo "<table>";
     for ($i = 1; $i <= $nbLignes; $i++) {
         echo "<tr>";
         for ($j = 1; $j <= $nbColonnes; $j++) {
             $fond = (($i + $j) % 2 == 0) ? $couleur : 'white';
-            $cle = "$i,$j";
+
+            $ligneRecherchee = $inverser ? ($nbLignes + 1 - $i) : $i;
+            $cle = "$ligneRecherchee,$j";
             $contenu = isset($pieces[$cle]) ? $pieces[$cle] : '';
+
             echo "<td style='background-color:" . $fond . ";'>" . $contenu . "</td>";
         }
         echo "</tr>";
