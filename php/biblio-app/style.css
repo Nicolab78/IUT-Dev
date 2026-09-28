@@ -1,0 +1,95 @@
+body {
+    font-family: system-ui, sans-serif;
+    max-width: 50rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background: whitesmoke;
+    color: #222;
+}
+
+nav {
+    background: seagreen;
+    padding: 0.8rem 1rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin: 1rem 0;
+}
+
+th, td {
+    border: 0.0625rem solid lightgray;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background: seagreen;
+    color: white;
+}
+
+form {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-top: 0.6rem;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 0.2rem;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: seagreen;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkgreen;
+}
+
+.message {
+    background: honeydew;
+    border: 0.0625rem solid seagreen;
+    padding: 0.6rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.journal {
+    background: #222;
+    color: whitesmoke;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    font-family: monospace;
+    font-size: 0.85rem;
+    overflow-x: auto;
+}
