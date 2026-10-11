@@ -1,0 +1,19 @@
+body{
+    font-family: sans-serif;
+    margin: 1.25rem;
+}
+
+table{
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    border: 0.0625rem solid black;
+    padding: 0.3rem 0.8rem;
+    text-align: center;
+}
+
+th{
+    background-color: whitesmoke;
+}
