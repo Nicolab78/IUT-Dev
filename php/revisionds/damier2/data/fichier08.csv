@@ -1,0 +1,17 @@
+label,couleur,code html,ligne,colonne
+roi,blanc,&#9812;,1,4
+dame,blanc,&#9813;,4,5
+tour,blanc,&#9814;,2,8
+fou,blanc,&#9815;,5,3
+cavalier,blanc,&#9816;,3,6
+pion,blanc,&#9817;,6,4
+pion,blanc,&#9817;,5,7
+roi,noir,&#9818;,8,4
+dame,noir,&#9819;,6,5
+tour,noir,&#9820;,8,1
+fou,noir,&#9821;,4,7
+cavalier,noir,&#9822;,5,2
+pion,noir,&#9823;,7,4
+pion,noir,&#9823;,6,6
+pion,noir,&#9823;,5,5
+
