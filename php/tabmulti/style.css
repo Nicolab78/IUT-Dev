@@ -1,0 +1,13 @@
+td {
+    border: 0.0625rem solid gray;
+    padding: 0.3rem 0.8rem;
+    text-align: center;
+}
+
+td.pair {
+    background-color: whitesmoke;
+}
+
+td.impair {
+    background-color: lightsteelblue;
+}
